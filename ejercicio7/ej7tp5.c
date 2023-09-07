@@ -8,12 +8,17 @@ ventas de cada sucursal, luego imprima las ventas previamente ingresadas.
 int main(int argc, char const *argv[])
 {
     int sucursales = 10;
+    int s;
+    int t;
     double empresaY[sucursales];
 
-    for(int s = 0; s < sucursales; s++) {
+    for(s = 0; s < sucursales; s++) {
         printf("Ingrese el total de ventas de la sucursal numero %d \n", s+1);
         scanf("%d", &empresaY[s]);
-        printf("La sucursal numero %d tiene un ingreso total de $ %d \n\n\n", s+1, empresaY[s]);
+    }
+    printf("\n");
+    for(t = 0; t < sucursales; t++) {
+        printf("La sucursal numero %d tiene un ingreso total de $ %d \n", t+1, empresaY[t]);
     }
 
     return 0;
