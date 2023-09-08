@@ -14,9 +14,15 @@ int main(int argc, char const *argv[])
 
     for(int s = 0; s < sucursales; s++) {
         for(int v = 0; v < vendedores; v++) {
-            printf("Ingrese el total de ventas de la sucursal %d, y el vendedor %d \n", s+1, v+1);
+            printf("Ingrese el total de ventas de la sucursal numero %d y vendedor %d \n", s+1, v+1);
             scanf("%lf", &empresaY[s][v]);
-            printf("La sucursal numero %d ,del vendedor %d tiene un ingreso total de $ %.1f \n\n\n", s+1, v+1, empresaY[s][v]);
+        }
+    }
+    printf("\n");
+
+    for(int s = 0; s < sucursales; s++) {
+        for(int v = 0; v < sucursales; v++) {
+            printf("La sucursal numero %d con vendedor %d tiene un ingreso total de $ %.2f \n", s+1, v+1, empresaY[s][v]);
         }
     }
 
