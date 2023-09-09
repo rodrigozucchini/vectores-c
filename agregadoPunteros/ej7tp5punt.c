@@ -10,13 +10,20 @@ Agregando punteros
 int main(int argc, char const *argv[])
 {
     int sucursales = 10;
+    int s;
+    int t;
     double empresaY[sucursales];
-    double *p = empresaY;
+    double *p = &empresaY[0];
 
-    for(int s = 0; s < sucursales; s++, p++) {
+    for(s = 0; s < sucursales; s++, p++) {
         printf("Ingrese el total de ventas de la sucursal numero %d \n", s+1);
-        scanf("%lf", &empresaY[s]);
-        printf("La sucursal numero %d tiene un ingreso total de $ %.2lf \n\n\n", s+1, *p);
+        scanf("%lf", p);
+    }
+    printf("\n");
+
+
+    for(t = 0; t < sucursales; t++) {
+        printf("La sucursal numero %d tiene un ingreso total de $ %.1lf \n", t+1, empresaY[t]);
     }
 
     return 0;
