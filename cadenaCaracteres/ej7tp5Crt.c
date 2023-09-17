@@ -16,16 +16,18 @@ int main(int argc, char const *argv[])
     int t;
     double empresaY[sucursales];
 
-    memset(empresaY, 0, sucursales * sizeof(double));
+    memset(empresaY, 0, sizeof(double) * sucursales);
 
     for(s = 0; s < sucursales; s++) {
         printf("Ingrese el total de ventas de la sucursal numero %d \n", s+1);
         scanf("%d", &empresaY[s]);
     }
     printf("\n");
+    
     for(t = 0; t < sucursales; t++) {
         printf("La sucursal numero %d tiene un ingreso total de $ %d \n", t+1, empresaY[t]);
     }
+
 
     return 0;
 }
